@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Parts from './Parts'
 
 export default function Specs(props) {
