@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import Customize from './components/Customize';
+import React, { Component } from 'react'
+import FEATURES from './FEATURES'
+import Header from './components/Header'
+import Customize from './components/Customize'
 import Summary from './components/Summary'
-import './App.css';
+import './App.css'
 
 export default class App extends Component {
   state = {
@@ -36,13 +38,11 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Header />
         <main>
-          <Customize 
-            selected={this.state.selected} 
-            features={this.props.features}
+          <Customize
+            features={FEATURES}
+            selected={this.state.selected}
             handleUpdate={this.updateFeature}
           />
           <Summary selected={this.state.selected} />
